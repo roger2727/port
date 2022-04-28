@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 120rem;
+  font-family: "Inter", sans-serif;
+}
+/* ---------------navbar------------------ */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "Inter", sans-serif;
+  background-color: #0f2027;
+  padding: 20px;
+  font-size: 20px;
+}
+.nav-a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  /* border-bottom: 2px solid #39b385; */
+  background-color: #0f2027;
+  padding-bottom: 3px;
+  border-bottom: white solid 3px;
+}
+.nav-a:hover {
+  border-bottom: none;
+}
+/* -----------social links------------------ */
+
+.hero {
+  width: 17%;
+  height: 10%;
+  background: #0f2027;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  margin: 0 10px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.social-links a .fab {
+  font-size: 25px;
+  line-height: 30px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-links a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: #000;
+  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-links a:hover::after {
+  top: 0;
+}
+
+.social-links a:hover .fab {
+  color: whitesmoke;
+}
+
+.social-links a:hover {
+  transform: translateY(-10px);
+}
+
+/* ---------------main section------------------ */
+.background {
+  width: 100%;
+  height: 36rem;
+  background-image: linear-gradient(to top left, #0f2027, #203a43, #2c5364);
+  padding: 0px 150px 0px 150px;
+  display: flex;
+  align-items: center;
+  gap: 5.3rem;
+}
+
+.pic {
+  width: 20rem;
+  height: fit-content;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: white;
+  padding-top: 5px;
+}
+
+.testimonial-author {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #c3fae8;
+}
+
+.testimonial-job {
+  font-size: 12px;
+  color: #c3fae8;
+}
+
+.skills-heading {
+  color: white;
+  padding-top: 60px;
+}
+
+.icons {
+  width: 30px;
+  margin: 13px 21px 0px 0px;
+}
+.html-text {
+  visibility: hidden;
+  opacity: 0;
+  padding-right: 19px;
+  padding-top: 7px;
+  color: white;
+  font-size: 11px;
+}
+.icon:hover .html-text {
+  visibility: visible;
+  opacity: 1;
+  text-align: center;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.skills {
+  animation: 2s linear slideInFromLeft;
+  display: flex;
+  justify-content: flex-start;
+  justify-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.projects {
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+.arrow {
+  color: white;
+  width: 30px;
+}
+.pro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* -------------cards---------------------------- */
+
+.main {
+  background-color: #0f2027;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.card_btn {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 0.8rem;
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background: #2c5364;
+}
+
+.card_btn:hover {
+  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.cards_item {
+  display: flex;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background-color: white;
+}
+
+.card_title {
+  color: #505056;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}

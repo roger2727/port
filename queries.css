@@ -1,0 +1,52 @@
+@media (max-width: 925px) {
+  .background {
+    height: 650px;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 3rem 2rem 3rem;
+    gap: 2rem;
+  }
+  .pic {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .header {
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .hero {
+    width: max-content;
+  }
+  .testimonial-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+  .header {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .hero {
+    width: max-content;
+    /* padding-top: 20px; */
+  }
+}
